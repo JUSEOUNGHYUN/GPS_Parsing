@@ -1,0 +1,19 @@
+﻿  GpsParsingDlg.cpp
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.h(18,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(261,21): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(277,20): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(292,21): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(302,10): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(312,10): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(313,10): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(326,10): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(334,10): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(463,34): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(473,16): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(553,17): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(570,19): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(709,18): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(710,18): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(830,18): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\313-PC\Work\03 GPS\GpsParsing_2\GpsParsing\GpsParsingDlg.cpp(831,18): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GpsParsing.vcxproj -> C:\Users\313-PC\Work\03 GPS\GpsParsing_2\x64\Debug\GpsParsing.exe

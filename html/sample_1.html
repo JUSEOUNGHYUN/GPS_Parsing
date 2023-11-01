@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Multi-Position Mark</title>
+</html>
+<body>
+<div id='map' style='width:100 %; height:350px;'></div>
+<script type='text/javascript' src='https://dapi.kakao.com/v2/maps/sdk.js?appkey=31b4550cf25c251d62cae2a593f6ac38'></script>
+<script>
+var mapContainer = document.getElementById('map'),
+	mapOption = {
+		center: new kakao.maps.LatLng(38.548958, 77.024849),
+		level: 6
+	};
+var map = new kakao.maps.Map(mapContainer, mapOption);
+var positions = [
+	{
+		title: '1',
+		latlng: new kakao.maps.LatLng(38.54928, 077.02497)
+	},
+	{
+		title: '2',
+		latlng: new kakao.maps.LatLng(38.54926, 077.02497)
+	},
+	{
+		title: '3',
+		latlng: new kakao.maps.LatLng(38.54924, 077.02496)
+	},
+	{
+		title: '4',
+		latlng: new kakao.maps.LatLng(38.54923, 077.02496)
+	},
+	{
+		title: '5',
+		latlng: new kakao.maps.LatLng(38.54921, 077.02496)
+	},
+	{
+		title: '6',
+		latlng: new kakao.maps.LatLng(38.54919, 077.02495)
+	},
+	{
+		title: '7',
+		latlng: new kakao.maps.LatLng(38.54917, 077.02494)
+	},
+	{
+		title: '8',
+		latlng: new kakao.maps.LatLng(38.54916, 077.02494)
+	},
+	{
+		title: '9',
+		latlng: new kakao.maps.LatLng(38.54914, 077.02494)
+	},
+	{
+		title: '10',
+		latlng: new kakao.maps.LatLng(38.54912, 077.02494)
+	},
+	{
+		title: '11',
+		latlng: new kakao.maps.LatLng(38.54910, 077.02493)
+	},
+	{
+		title: '12',
+		latlng: new kakao.maps.LatLng(38.54909, 077.02493)
+	},
+	{
+		title: '13',
+		latlng: new kakao.maps.LatLng(38.54907, 077.02493)
+	},
+	{
+		title: '14',
+		latlng: new kakao.maps.LatLng(38.54905, 077.02492)
+	},
+	{
+		title: '15',
+		latlng: new kakao.maps.LatLng(38.54903, 077.02492)
+	},
+	{
+		title: '16',
+		latlng: new kakao.maps.LatLng(38.54902, 077.02491)
+	},
+	{
+		title: '17',
+		latlng: new kakao.maps.LatLng(38.54900, 077.02490)
+	},
+	{
+		title: '18',
+		latlng: new kakao.maps.LatLng(38.54899, 077.02489)
+	},
+	{
+		title: '19',
+		latlng: new kakao.maps.LatLng(38.54897, 077.02488)
+	},
+	{
+		title: '20',
+		latlng: new kakao.maps.LatLng(38.54895, 077.02488)
+	},
+	{
+		title: '21',
+		latlng: new kakao.maps.LatLng(38.54894, 077.02487)
+	},
+	{
+		title: '22',
+		latlng: new kakao.maps.LatLng(38.54892, 077.02486)
+	},
+	{
+		title: '23',
+		latlng: new kakao.maps.LatLng(38.54891, 077.02485)
+	},
+	{
+		title: '24',
+		latlng: new kakao.maps.LatLng(38.54889, 077.02484)
+	},
+	{
+		title: '25',
+		latlng: new kakao.maps.LatLng(38.54888, 077.02483)
+	},
+	{
+		title: '26',
+		latlng: new kakao.maps.LatLng(38.54886, 077.02483)
+	},
+	{
+		title: '27',
+		latlng: new kakao.maps.LatLng(38.54885, 077.02481)
+	},
+	{
+		title: '28',
+		latlng: new kakao.maps.LatLng(38.54883, 077.02480)
+	},
+	{
+		title: '29',
+		latlng: new kakao.maps.LatLng(38.54882, 077.02480)
+	},
+	{
+		title: '30',
+		latlng: new kakao.maps.LatLng(38.54880, 077.02479)
+	},
+	{
+		title: '31',
+		latlng: new kakao.maps.LatLng(38.54878, 077.02478)
+	},
+	{
+		title: '32',
+		latlng: new kakao.maps.LatLng(38.54877, 077.02477)
+	},
+	{
+		title: '33',
+		latlng: new kakao.maps.LatLng(38.54875, 077.02476)
+	},
+	{
+		title: '34',
+		latlng: new kakao.maps.LatLng(38.54874, 077.02475)
+	},
+	{
+		title: '35',
+		latlng: new kakao.maps.LatLng(38.54873, 077.02473)
+	},
+	{
+		title: '36',
+		latlng: new kakao.maps.LatLng(38.54871, 077.02472)
+	},
+	{
+		title: '37',
+		latlng: new kakao.maps.LatLng(38.54870, 077.02471)
+	},
+	{
+		title: '38',
+		latlng: new kakao.maps.LatLng(38.54869, 077.02469)
+	},
+	{
+		title: '39',
+		latlng: new kakao.maps.LatLng(38.54868, 077.02468)
+	},
+	{
+		title: '40',
+		latlng: new kakao.maps.LatLng(38.54867, 077.02466)
+	},
+];
+var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png'; 
+
+for (var i = 0; i < positions.length; i ++) {
+var imageSize = new kakao.maps.Size(24, 35);
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+var marker = new kakao.maps.Marker({
+map: map,
+position: positions[i].latlng,
+title : positions[i].title,
+image : markerImage
+});
+}
+</script>
+</body>
+</html>

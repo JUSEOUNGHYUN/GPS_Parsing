@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Multi-Position Mark</title>
+</html>
+<body>
+<div id='map' style='width:100 %; height:350px;'></div>
+<script type='text/javascript' src='https://dapi.kakao.com/v2/maps/sdk.js?appkey=31b4550cf25c251d62cae2a593f6ac38'></script>
+<script>
+var mapContainer = document.getElementById('map'),
+	mapOption = {
+		center: new kakao.maps.LatLng(55.403214, 12.312972),
+		level: 6
+	};
+var map = new kakao.maps.Map(mapContainer, mapOption);
+var positions = [
+	{
+		title: '1',
+		latlng: new kakao.maps.LatLng(55.403252, 012.312946)
+	},
+	{
+		title: '2',
+		latlng: new kakao.maps.LatLng(55.403244, 012.312941)
+	},
+	{
+		title: '3',
+		latlng: new kakao.maps.LatLng(55.403231, 012.312938)
+	},
+	{
+		title: '4',
+		latlng: new kakao.maps.LatLng(55.403233, 012.312941)
+	},
+	{
+		title: '5',
+		latlng: new kakao.maps.LatLng(55.403232, 012.312946)
+	},
+	{
+		title: '6',
+		latlng: new kakao.maps.LatLng(55.403238, 012.312961)
+	},
+	{
+		title: '7',
+		latlng: new kakao.maps.LatLng(55.403247, 012.312959)
+	},
+	{
+		title: '8',
+		latlng: new kakao.maps.LatLng(55.403246, 012.312970)
+	},
+	{
+		title: '9',
+		latlng: new kakao.maps.LatLng(55.403248, 012.312980)
+	},
+	{
+		title: '10',
+		latlng: new kakao.maps.LatLng(55.403248, 012.312992)
+	},
+	{
+		title: '11',
+		latlng: new kakao.maps.LatLng(55.403247, 012.313001)
+	},
+	{
+		title: '12',
+		latlng: new kakao.maps.LatLng(55.403245, 012.313009)
+	},
+	{
+		title: '13',
+		latlng: new kakao.maps.LatLng(55.403243, 012.313013)
+	},
+	{
+		title: '14',
+		latlng: new kakao.maps.LatLng(55.403241, 012.313016)
+	},
+	{
+		title: '15',
+		latlng: new kakao.maps.LatLng(55.403237, 012.313015)
+	},
+	{
+		title: '16',
+		latlng: new kakao.maps.LatLng(55.403235, 012.313012)
+	},
+	{
+		title: '17',
+		latlng: new kakao.maps.LatLng(55.403231, 012.313010)
+	},
+	{
+		title: '18',
+		latlng: new kakao.maps.LatLng(55.403227, 012.313006)
+	},
+	{
+		title: '19',
+		latlng: new kakao.maps.LatLng(55.403225, 012.312999)
+	},
+	{
+		title: '20',
+		latlng: new kakao.maps.LatLng(55.403221, 012.312994)
+	},
+	{
+		title: '21',
+		latlng: new kakao.maps.LatLng(55.403216, 012.312991)
+	},
+	{
+		title: '22',
+		latlng: new kakao.maps.LatLng(55.403212, 012.312984)
+	},
+	{
+		title: '23',
+		latlng: new kakao.maps.LatLng(55.403206, 012.312981)
+	},
+	{
+		title: '24',
+		latlng: new kakao.maps.LatLng(55.403202, 012.312975)
+	},
+	{
+		title: '25',
+		latlng: new kakao.maps.LatLng(55.403198, 012.312971)
+	},
+	{
+		title: '26',
+		latlng: new kakao.maps.LatLng(55.403194, 012.312967)
+	},
+	{
+		title: '27',
+		latlng: new kakao.maps.LatLng(55.403191, 012.312965)
+	},
+	{
+		title: '28',
+		latlng: new kakao.maps.LatLng(55.403187, 012.312963)
+	},
+	{
+		title: '29',
+		latlng: new kakao.maps.LatLng(55.403186, 012.312959)
+	},
+	{
+		title: '30',
+		latlng: new kakao.maps.LatLng(55.403182, 012.312953)
+	},
+	{
+		title: '31',
+		latlng: new kakao.maps.LatLng(55.403180, 012.312947)
+	},
+	{
+		title: '32',
+		latlng: new kakao.maps.LatLng(55.403177, 012.312944)
+	},
+	{
+		title: '33',
+		latlng: new kakao.maps.LatLng(55.403171, 012.312942)
+	},
+	{
+		title: '34',
+		latlng: new kakao.maps.LatLng(55.403166, 012.312939)
+	},
+	{
+		title: '35',
+		latlng: new kakao.maps.LatLng(55.403160, 012.312940)
+	},
+	{
+		title: '36',
+		latlng: new kakao.maps.LatLng(55.403152, 012.312945)
+	},
+	{
+		title: '37',
+		latlng: new kakao.maps.LatLng(55.403144, 012.312954)
+	},
+	{
+		title: '38',
+		latlng: new kakao.maps.LatLng(55.403133, 012.312962)
+	},
+	{
+		title: '39',
+		latlng: new kakao.maps.LatLng(55.403125, 012.312966)
+	},
+];
+var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png'; 
+
+for (var i = 0; i < positions.length; i ++) {
+var imageSize = new kakao.maps.Size(24, 35);
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+var marker = new kakao.maps.Marker({
+map: map,
+position: positions[i].latlng,
+title : positions[i].title,
+image : markerImage
+});
+}
+</script>
+</body>
+</html>

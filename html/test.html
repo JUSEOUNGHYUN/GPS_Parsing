@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Maps</title>
+	<style type='text/css'>
+	#map {
+		height: 400px;
+		width: 100%;
+	}
+</style>
+<script>
+	function initMap() {
+		const map = new google.maps.Map(document.getElementById('map'), {
+		 zoom: 14,
+		center: { lat: 47.299297, lng: 19.022562},
+})
+for (var i = 0; i < locations.length; i++) {
+var marker = new google.maps.Marker({
+	map: map,
+	label: locations[i].place,
+	position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+});
+}
+}
+const locations = [
+{ place: '1', lat: 47.29257, lng: 019.02167},
+{ place: '2', lat: 47.30185, lng: 019.02315},
+{ place: '3', lat: 47.30346, lng: 019.02287},
+];
+</script>
+</head>
+<body>
+<h3><div id='map'></div>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4hsvZYX9o06po2yHuroa_P0l0_d9aceo&callback=initMap&libraries=&v=weekly"
+	async></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Maps</title>
+	<style type='text/css'>
+	#map {
+		height: 400px;
+		width: 100%;
+	}
+</style>
+<script>
+	function initMap() {
+		const map = new google.maps.Map(document.getElementById('map'), {
+		 zoom: 14,
+		center: { lat: 33.286049, lng: 126.309837},
+})
+for (var i = 0; i < locations.length; i++) {
+var marker = new google.maps.Marker({
+	map: map,
+	label: locations[i].place,
+	position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+});
+}
+}
+const locations = [
+{ place: '1', lat: 33.30344, lng: 126.29545},
+{ place: '2', lat: 33.30277, lng: 126.29447},
+{ place: '3', lat: 33.30277, lng: 126.29447},
+{ place: '4', lat: 33.30193, lng: 126.29496},
+{ place: '5', lat: 33.30193, lng: 126.29496},
+{ place: '6', lat: 33.30328, lng: 126.29767},
+{ place: '7', lat: 33.30328, lng: 126.29767},
+{ place: '8', lat: 33.29970, lng: 126.29816},
+{ place: '9', lat: 33.29970, lng: 126.29816},
+{ place: '10', lat: 33.29433, lng: 126.29805},
+{ place: '11', lat: 33.29433, lng: 126.29805},
+{ place: '12', lat: 33.28913, lng: 126.29787},
+{ place: '13', lat: 33.28913, lng: 126.29787},
+{ place: '14', lat: 33.28497, lng: 126.30127},
+{ place: '15', lat: 33.28497, lng: 126.30127},
+{ place: '16', lat: 33.28381, lng: 126.30271},
+{ place: '17', lat: 33.28381, lng: 126.30271},
+{ place: '18', lat: 33.28310, lng: 126.30482},
+{ place: '19', lat: 33.28310, lng: 126.30482},
+{ place: '20', lat: 33.28215, lng: 126.30570},
+{ place: '21', lat: 33.28215, lng: 126.30570},
+{ place: '22', lat: 33.28086, lng: 126.30619},
+{ place: '23', lat: 33.28086, lng: 126.30619},
+{ place: '24', lat: 33.28024, lng: 126.30676},
+{ place: '25', lat: 33.28024, lng: 126.30676},
+{ place: '26', lat: 33.28020, lng: 126.30727},
+{ place: '27', lat: 33.28020, lng: 126.30727},
+{ place: '28', lat: 33.28026, lng: 126.30781},
+{ place: '29', lat: 33.28026, lng: 126.30781},
+{ place: '30', lat: 33.28024, lng: 126.30900},
+{ place: '31', lat: 33.28024, lng: 126.30900},
+{ place: '32', lat: 33.28013, lng: 126.31051},
+{ place: '33', lat: 33.28013, lng: 126.31051},
+{ place: '34', lat: 33.28001, lng: 126.31193},
+{ place: '35', lat: 33.28001, lng: 126.31193},
+{ place: '36', lat: 33.28001, lng: 126.31294},
+{ place: '37', lat: 33.28001, lng: 126.31294},
+{ place: '38', lat: 33.28071, lng: 126.31332},
+{ place: '39', lat: 33.28071, lng: 126.31332},
+{ place: '40', lat: 33.28140, lng: 126.31317},
+{ place: '41', lat: 33.28140, lng: 126.31314},
+{ place: '42', lat: 33.28271, lng: 126.31340},
+{ place: '43', lat: 33.28271, lng: 126.31340},
+{ place: '44', lat: 33.28325, lng: 126.31350},
+{ place: '45', lat: 33.28325, lng: 126.31350},
+{ place: '46', lat: 33.28381, lng: 126.31412},
+{ place: '47', lat: 33.28381, lng: 126.31412},
+{ place: '48', lat: 33.28426, lng: 126.31512},
+{ place: '49', lat: 33.28426, lng: 126.31512},
+{ place: '50', lat: 33.28482, lng: 126.31572},
+{ place: '51', lat: 33.28482, lng: 126.31572},
+{ place: '52', lat: 33.28501, lng: 126.31626},
+{ place: '53', lat: 33.28501, lng: 126.31626},
+{ place: '54', lat: 33.28501, lng: 126.31669},
+{ place: '55', lat: 33.28501, lng: 126.31669},
+{ place: '56', lat: 33.28516, lng: 126.31739},
+{ place: '57', lat: 33.28516, lng: 126.31739},
+{ place: '58', lat: 33.28516, lng: 126.31806},
+{ place: '59', lat: 33.28516, lng: 126.31806},
+{ place: '60', lat: 33.28495, lng: 126.31868},
+{ place: '61', lat: 33.28495, lng: 126.31868},
+{ place: '62', lat: 33.28529, lng: 126.31950},
+{ place: '63', lat: 33.28529, lng: 126.31950},
+{ place: '64', lat: 33.28559, lng: 126.32020},
+{ place: '65', lat: 33.28559, lng: 126.32020},
+{ place: '66', lat: 33.28587, lng: 126.32076},
+{ place: '67', lat: 33.28587, lng: 126.32076},
+{ place: '68', lat: 33.28626, lng: 126.32141},
+{ place: '69', lat: 33.28626, lng: 126.32141},
+{ place: '70', lat: 33.28658, lng: 126.32195},
+];
+</script>
+</head>
+<body>
+<h3><div id='map'></div>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4hsvZYX9o06po2yHuroa_P0l0_d9aceo&callback=initMap&libraries=&v=weekly"
+	async></script>
+</body>
+
+</html>
