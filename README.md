@@ -3,14 +3,16 @@
 📍 프로젝트 기간 : 2023.07.10 ~ 2023.10.01 (3개월)
 
 # 📌 개요
-
+ - c++ fopen, fread를 공부를 하던 도중 NMEA 데이터를 byte별로 쪼개서 fread를 하면 제대로 공부가 될것을 예상해 이 프로그램을 기획하게 되었습니다.
+- NMEA 데이터를 fread하고, 데이터(GGA, GSA, RMC, GSV etc)를 Parsing후 각각 경도,위도를 추출했습니다.
+- html에 그 데이터를 주입하여 html에 마크업이 되는 기능을 구현했습니다.
 
 # 🛠️ 기술 및 도구
 <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C Sharp&logoColor=white"/> <img src="https://img.shields.io/badge/MFC-239120?style=flat-square&logo=MFC&logoColor=white"/> <img src="https://img.shields.io/badge/html-E34F26?style=flat-square&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/NMEA-000000?style=flat-square&logo=NMEA&logoColor=white"/>
 
 # 🎏 기능 구현
 - GPS Data(NEMA) Parsing
-- Google Map, Kakao Map
+- Load in Google Map, Kakao Map
 - Set View html
 - File Read (fopen, fseek, fread, fgets)
 
@@ -36,11 +38,13 @@
     	file.WriteString(_T("\t};\n"));
     	file.WriteString(_T("var map = new kakao.maps.Map(mapContainer, mapOption);\n"));
     	file.WriteString(_T("var positions = [\n"));
+     
+             // for문 = html에 위도, 경도 데이터 주입
     	for (int i = 0; i < GGALatCount; i++)
     	{
     		CString inf;
-    		CString GGALat = CA2CT(strGroupGGALat[i].c_str());
-    		CString GGALon = CA2CT(strGroupGGALon[i].c_str());
+    		CString GGALat = CA2CT(strGroupGGALat[i].c_str()); // 위도 
+    		CString GGALon = CA2CT(strGroupGGALon[i].c_str()); // 경도
     		inf.Format(_T("%d"), i + 1);
     		file.WriteString(_T("\t{\n"));
     		file.WriteString(_T("\t\ttitle: '") + inf + _T("',\n"));
@@ -64,9 +68,22 @@
     	file.WriteString(_T("</body>\n"));
     	file.WriteString(_T("</html>\n"));
 
-#### 파일 생성
+#### 1.1 파일 생성
 
 ![화면 캡처 2023-11-02 013915](https://github.com/JUSEOUNGHYUN/FIMWOMANAGER/assets/80812790/136e5034-d18f-4da8-9006-7b7aec62ed28)
+
+#### 1.2 html에 위치 데이터 마크업
+    var positions = [
+    	{
+    		title: '1',
+    		latlng: new kakao.maps.LatLng(33.30344, 126.29545)
+    	},
+    	...........
+    	{
+    		title: '40',
+    		latlng: new kakao.maps.LatLng(33.28140, 126.31317)
+    	},
+    ];
 
 ### 2. SetViewHtml()
     void CGpsParsingDlg::SetViewHtml()
@@ -103,11 +120,11 @@
     	}
     }
 
-### 3. GPS 위치 데이터에 대한 마크업 html (카카오 지도)
+### 3. GPS 위치 데이터 마크업 html (카카오 지도)
 
 ![화면 캡처 2023-11-02 014037](https://github.com/JUSEOUNGHYUN/FIMWOMANAGER/assets/80812790/c36e640c-472e-48c2-8c47-2169b38f81bb)
 
-### 4. GPS 위치 데이터에 대한 마크업 html (구글 지도)
+### 4. GPS 위치 데이터 마크업 html (구글 지도)
 
 ![google map](https://github.com/JUSEOUNGHYUN/FIMWOMANAGER/assets/80812790/b09d98a9-f2bb-4df0-9025-ea227b3956b5)
 
