@@ -17,7 +17,8 @@
 - File Read (fopen, fseek, fread, fgets)
 
 ### 0. 기본 화면
-![Basic Screen](https://github.com/JUSEOUNGHYUN/FIMWOMANAGER/assets/80812790/3f7a8fa1-49fe-4775-ae02-2ef6cadf12e6)
+
+![Basic Screen](https://github.com/JUSEOUNGHYUN/GPS_Parsing/assets/80812790/28a46cf0-2751-485e-8bc2-5f2e6b627b9f)
 
 ### 1. GPS 데이터(NMEA) Parsing후 html 파일 생성
     	file.Open(m_total, CStdioFile::modeCreate | CStdioFile::modeNoTruncate | CStdioFile::modeWrite | CStdioFile::typeText);
@@ -70,7 +71,7 @@
 
 #### 1.1 파일 생성
 
-![화면 캡처 2023-11-02 013915](https://github.com/JUSEOUNGHYUN/FIMWOMANAGER/assets/80812790/136e5034-d18f-4da8-9006-7b7aec62ed28)
+![화면 캡처 2023-11-02 013915](https://github.com/JUSEOUNGHYUN/GPS_Parsing/assets/80812790/2350b7c3-4ab2-4b7c-8ad8-af03c4b41cb3)
 
 #### 1.2 html에 위치 데이터 마크업
     var positions = [
@@ -122,13 +123,12 @@
 
 ### 3. GPS 위치 데이터 마크업 html (카카오 지도)
 
-![화면 캡처 2023-11-02 014037](https://github.com/JUSEOUNGHYUN/FIMWOMANAGER/assets/80812790/c36e640c-472e-48c2-8c47-2169b38f81bb)
+![화면 캡처 2023-11-02 014037](https://github.com/JUSEOUNGHYUN/GPS_Parsing/assets/80812790/9876dff4-4e88-4efe-bb61-6d8b180b95ef)
 
 ### 4. GPS 위치 데이터 마크업 html (구글 지도)
 
-![google map](https://github.com/JUSEOUNGHYUN/FIMWOMANAGER/assets/80812790/b09d98a9-f2bb-4df0-9025-ea227b3956b5)
+![google map](https://github.com/JUSEOUNGHYUN/GPS_Parsing/assets/80812790/55166722-d56a-4804-af77-f214eeb619df)
 
 ### 5. 컴파일
 
-![gps_1](https://github.com/JUSEOUNGHYUN/FIMWOMANAGER/assets/80812790/0998477b-b6c6-4b11-abfd-eb542e80ef9d)
-
+![gps_1](https://github.com/JUSEOUNGHYUN/GPS_Parsing/assets/80812790/3012a40e-aecb-44d7-9187-b9ddee384879)
