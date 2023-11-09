@@ -1,21 +1,3 @@
-# 📛 GPS_Parsing
-
-📍 프로젝트 기간 : 2023.07.10 ~ 2023.10.01 (3개월)
-
-# 📌 개요
- - c++ fopen, fread를 공부를 하던 도중 NMEA 데이터를 BYTE별로 쪼개서 fread를 하면 제대로 공부가 될것을 예상해 이 프로그램을 기획하게 되었습니다.
-- NMEA 데이터를 fread하고, 데이터(GGA, GSA, RMC, GSV etc)를 Parsing후 각각 경도,위도를 추출했습니다.
-- html에 그 데이터를 주입하여 html에 마크업이 되는 기능을 구현했습니다.
-
-# 🛠️ 기술 및 도구
-<img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C Sharp&logoColor=white"/> <img src="https://img.shields.io/badge/MFC-239120?style=flat-square&logo=MFC&logoColor=white"/> <img src="https://img.shields.io/badge/html-E34F26?style=flat-square&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/NMEA-000000?style=flat-square&logo=NMEA&logoColor=white"/>
-
-# 🎏 기능 구현
-- GPS Data(NEMA) Parsing
-- Load in Google Map, Kakao Map
-- Set View html
-- File Read (fopen, fseek, fread, fgets)
-
 ### 0. 기본 화면
 
 ![Basic Screen](https://github.com/JUSEOUNGHYUN/GPS_Parsing/assets/80812790/28a46cf0-2751-485e-8bc2-5f2e6b627b9f)
